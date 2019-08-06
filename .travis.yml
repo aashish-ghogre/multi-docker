@@ -14,7 +14,7 @@ after_success:
   - docker build -t aashishghogre/multi-server ./server
   - docker build -t aashishghogre/multi-worker ./worker
   #Log in to the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" -- password-stdin
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   #Take built images and push them to docker hub
   - docker push aashishghogre/multi-client
   - docker push aashishghogre/multi-nginx
