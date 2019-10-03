@@ -24,7 +24,7 @@
     {
       "name": "nginx",
       "image": "aashishghogre/multi-nginx",
-      "essential": true,
+      "essential": false,
       "portMappings": [
         {
           "hostPort": 80,
